@@ -20,13 +20,13 @@
 
     /* Estrellas */
 .estrellas {
-  position: fixed;  
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; 
-  z-index: 1; 
+  background: white;
+  opacity: 0.8;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9999; /* aseguramos que estén por encima */
 }
 
 .estrella {
@@ -87,4 +87,5 @@
   width: 330px;  
   z-index: 3;    
 }
+
 
