@@ -94,23 +94,10 @@ estrella.style.left = Math.random() * 100 + "%";
   // Crear 200 estrellas
   crearEstrellas(200);
 
-  // 📱 Bloquear orientación (forzar portrait)
-  window.addEventListener("orientationchange", function () {
-    if (window.orientation !== 0) {
-      alert("Por favor usa el celular en vertical 📱");
-    }
-  });
-
-  // 📌 Mantener el contenido fijo en pantalla
-  window.addEventListener("resize", () => {
-    document.querySelector(".cuerpo").style.height = window.innerHeight + "px";
-  });
-
-  // Ajustar tamaño inicial
-  document.querySelector(".cuerpo").style.height = window.innerHeight + "px";
 </script>
 </body>
 
 </html>
+
 
 
