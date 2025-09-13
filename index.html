@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <title>manguitos</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta con estrellas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cuerpo">
+
+    <!-- Fondo de estrellas -->
+    <div class="estrellas"></div>
+
+    <!-- Texto principal -->
+    <div class="texto">
+      <h2>
+        mira se que mi forma de actuar el hecho de lo que hice fue mal, aun que si sentia amor hacia ti, mi inmadures y mi forma de ser me afecto y no supe
+        como actuar, tu me entregaste tu corazon y yo siento que no lo aprecie como se debio, esa vez que me llamaste me dio ganas que volvamos a hablar normal
+        pero como me preguntaste preferi decirte la verdad a darte alguna que otra mentira pero por eso te escribo esto, si me equivoque te lo puedo asegurar
+        y no se si me puedas permitir volver a tu vida, no te negare ahora mismo con el estudio me tiene igual de ocupado pero aun asi me doy tiempo para elaborarte
+        este proyecto si en dado caso tu no llegases a querer lo entendere tranqui de seguro tambien estas ocupada con tus estudios y no quisiera interrumpirlo
+        tal vez igual estes conociendo a alguien y aun asi te lo mando espero que me puedas responder para volver a hablar....
+      </h2>
+    </div>
+
+    <!-- Video oculto -->
+    <div class="video-background">
+      <iframe id="videoFondo"
+        src="https://www.youtube.com/embed/7Ko_IQ0WPjo?autoplay=1&loop=1&playlist=7Ko_IQ0WPjo&controls=0&showinfo=0&modestbranding=1&mute=1"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Botones -->
+    <div class="bonton">
+      <button onclick="activarSonido()">🔊 Activar Sonido</button>
+      <button onclick="pausarSonido()">🔇 Pausar Sonido</button>
+    </div>
+  </div>
+
+  
+<img src="image/gato.png" class="gato">
+
+
+  <script>
+    function activarSonido() {
+      let iframe = document.getElementById("videoFondo");
+      iframe.src = "https://www.youtube.com/embed/7Ko_IQ0WPjo?autoplay=1&loop=1&playlist=7Ko_IQ0WPjo&controls=0&showinfo=0&modestbranding=1";
+    }
+
+    function pausarSonido() {
+      let iframe = document.getElementById("videoFondo");
+      iframe.src = "https://www.youtube.com/embed/7Ko_IQ0WPjo?autoplay=1&loop=1&playlist=7Ko_IQ0WPjo&controls=0&showinfo=0&modestbranding=1&mute=1";
+    }
+
+    function crearEstrellas(cantidad) {
+      let contenedor = document.querySelector(".estrellas");
+      for (let i = 0; i < cantidad; i++) {
+        let estrella = document.createElement("div");
+        estrella.classList.add("estrella");
+
+        // Posición aleatoria
+        estrella.style.top = Math.random() * window.innerHeight + "px";
+        estrella.style.left = Math.random() * window.innerWidth + "px";
+
+        // Tamaño aleatorio
+        let size = Math.random() * 6 + 1;
+        estrella.style.width = size + "px";
+        estrella.style.height = size + "px";
+
+        // Velocidad aleatoria
+        estrella.style.animationDuration = (Math.random() * 2 + 1) + "s";
+
+        contenedor.appendChild(estrella);
+      }
+    }
+
+    // Crear 200 estrellas
+    crearEstrellas(200);
+  </script>
+
+</body>
+</html>
